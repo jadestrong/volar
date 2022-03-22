@@ -21,6 +21,7 @@
 		"@volar/vue-language-service": "0.34.2",
 		"@volar/vue-typescript": "0.34.2",
 		"@vue/shared": "^3.2.31",
+		"@volar/logger": "workspace:^0.33.6",
 		"request-light": "^0.5.7",
 		"semver": "^7.3.5",
 		"upath": "^2.0.1",
