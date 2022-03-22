@@ -21,7 +21,8 @@
 		"@volar/source-map": "0.33.6",
 		"@volar/vue-code-gen": "0.33.6",
 		"@vue/compiler-sfc": "^3.2.27",
-		"@vue/reactivity": "^3.2.27"
+		"@vue/reactivity": "^3.2.27",
+		"semver": "^7.3.5"
 	},
 	"browser": {
 		"./out/plugins/pug.js": "./out/plugins/empty.js"

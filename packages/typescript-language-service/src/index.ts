@@ -25,6 +25,7 @@ import * as callHierarchy from './services/callHierarchy';
 import * as implementation from './services/implementation';
 import { TextDocument } from 'vscode-languageserver-textdocument';
 import * as shared from '@volar/shared';
+import logger from '@volar/logger';
 import type * as ts from 'typescript/lib/tsserverlibrary';
 
 export interface LanguageService extends ReturnType<typeof createLanguageService> { }
@@ -104,6 +105,7 @@ export function createLanguageService(
 			const scriptSnapshot = host.getScriptSnapshot(fileName);
 			if (scriptSnapshot) {
 				const scriptText = scriptSnapshot.getText(0, scriptSnapshot.getLength());
+				logger.info(`oldDoc: ${oldDoc ?? '---'}`);
 				const document = TextDocument.create(uri, shared.syntaxToLanguageId(path.extname(uri).slice(1)), oldDoc ? oldDoc[1].version + 1 : 0, scriptText);
 				documents.uriSet(uri, [version, document]);
 			}

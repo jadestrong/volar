@@ -1,0 +1,19 @@
+{
+  "name": "@volar/logger",
+  "version": "0.33.6",
+  "main": "out/index.js",
+  "license": "MIT",
+  "files": [
+    "out/**/*.js",
+    "out/**/*.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jadestrong/volar.git",
+    "directory": "packages/code-gen"
+  },
+  "dependencies": {
+    "semver": "^7.3.5",
+    "winston": "^3.6.0"
+  }
+}

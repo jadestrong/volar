@@ -13,6 +13,7 @@
 		"directory": "packages/code-gen"
 	},
 	"dependencies": {
-		"@volar/source-map": "0.33.6"
+		"@volar/source-map": "0.33.6",
+		"semver": "^7.3.5"
 	}
 }

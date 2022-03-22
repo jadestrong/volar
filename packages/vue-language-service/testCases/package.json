@@ -1,5 +1,8 @@
 {
     "devDependencies": {
         "vue": "^3.2.27"
+    },
+    "dependencies": {
+        "semver": "^7.3.5"
     }
 }

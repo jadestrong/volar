@@ -21,5 +21,8 @@
 		"@vue/runtime-core": "^3.2.27",
 		"vite": "^2.7.13",
 		"vue": "^3.2.27"
+	},
+	"dependencies": {
+		"semver": "^7.3.5"
 	}
 }

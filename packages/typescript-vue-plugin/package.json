@@ -16,6 +16,7 @@
 		"typescript": "latest"
 	},
 	"dependencies": {
-		"@volar/vue-typescript": "0.33.6"
+		"@volar/vue-typescript": "0.33.6",
+		"semver": "^7.3.5"
 	}
 }

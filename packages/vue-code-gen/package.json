@@ -20,6 +20,7 @@
 		"@volar/source-map": "0.33.6",
 		"@vue/compiler-core": "^3.2.27",
 		"@vue/compiler-dom": "^3.2.27",
-		"@vue/shared": "^3.2.27"
+		"@vue/shared": "^3.2.27",
+		"semver": "^7.3.5"
 	}
 }

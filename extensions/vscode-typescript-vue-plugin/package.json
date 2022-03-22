@@ -37,6 +37,7 @@
 		"vsce": "latest"
 	},
 	"dependencies": {
-		"@volar/typescript-plugin-forward": "file:typescript-plugin-forward"
+		"@volar/typescript-plugin-forward": "file:typescript-plugin-forward",
+		"semver": "^7.3.5"
 	}
 }

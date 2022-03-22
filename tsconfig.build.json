@@ -14,5 +14,8 @@
 		{
 			"path": "./packages/experimental/tsconfig.json"
 		},
+		{
+			"path": "./packages/logger/tsconfig.build.json"
+		}
 	]
 }
