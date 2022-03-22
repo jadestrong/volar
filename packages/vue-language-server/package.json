@@ -17,6 +17,7 @@
 		"directory": "packages/vue-language-server"
 	},
 	"dependencies": {
+		"@volar/logger": "workspace:^0.33.6",
 		"@volar/shared": "0.33.6",
 		"@volar/vue-language-service": "0.33.6",
 		"@volar/vue-typescript": "0.33.6",

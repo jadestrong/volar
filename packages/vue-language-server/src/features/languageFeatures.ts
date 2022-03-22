@@ -5,6 +5,7 @@ import * as vscode from 'vscode-languageserver';
 import type { Projects } from '../projects';
 import { fileRenamings, renameFileContentCache, getScriptText } from '../project';
 import { getDocumentSafely } from '../utils';
+import logger from '@volar/logger';
 
 export function register(
 	ts: typeof import('typescript/lib/tsserverlibrary'),
@@ -148,6 +149,7 @@ export function register(
 		return languageService?.findImplementations(handler.textDocument.uri, handler.position);
 	});
 	connection.onDefinition(async handler => {
+		logger.info('[languageFeatures onDefinition]');
 		const languageService = await getLanguageService(handler.textDocument.uri);
 		return languageService?.findDefinition(handler.textDocument.uri, handler.position);
 	});

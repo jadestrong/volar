@@ -85,6 +85,7 @@ export function createLanguageService(
 	};
 
 	function getValidTextDocument(uri: string) {
+		logger.info('[getValidTextDocument]');
 		const fileName = shared.uriToFsPath(uri);
 		if (!isValidFile(fileName)) {
 			return;
@@ -101,6 +102,9 @@ export function createLanguageService(
 		const fileName = shared.uriToFsPath(uri);
 		const version = host.getScriptVersion(fileName);
 		const oldDoc = documents.uriGet(uri);
+		logger.info(`is oldDoc: ${uri}
+${oldDoc?.[0]}
+${version}`);
 		if (!oldDoc || oldDoc[0] !== version) {
 			const scriptSnapshot = host.getScriptSnapshot(fileName);
 			if (scriptSnapshot) {
