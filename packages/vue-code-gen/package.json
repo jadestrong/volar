@@ -21,5 +21,6 @@
 		"@vue/compiler-core": "^3.2.31",
 		"@vue/compiler-dom": "^3.2.31",
 		"@vue/shared": "^3.2.31"
+		"semver": "^7.3.5"
 	}
 }

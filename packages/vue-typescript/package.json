@@ -22,6 +22,7 @@
 		"@volar/vue-code-gen": "0.34.2",
 		"@vue/compiler-sfc": "^3.2.31",
 		"@vue/reactivity": "^3.2.31"
+		"semver": "^7.3.5"
 	},
 	"browser": {
 		"./out/plugins/pug.js": "./out/plugins/empty.js"
