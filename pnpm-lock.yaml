@@ -8,6 +8,7 @@ importers:
   .:
     specifiers:
       '@types/jest': latest
+      '@volar/logger': workspace:^0.33.6
       '@vscode/test-web': latest
       jest: latest
       lerna: latest
@@ -15,6 +16,7 @@ importers:
       ts-jest: latest
       typescript: latest
     dependencies:
+      '@volar/logger': link:packages/logger
       semver: 7.3.5
     devDependencies:
       '@types/jest': 27.4.1
@@ -4098,7 +4100,7 @@ packages:
     engines: {node: '>= 10.17.0'}
     hasBin: true
     dependencies:
-      debug: 4.3.3
+      debug: 4.3.4
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -8008,7 +8010,7 @@ packages:
     engines: {node: '>= 10'}
     dependencies:
       agent-base: 6.0.2
-      debug: 4.3.3
+      debug: 4.3.4
       socks: 2.6.2
     transitivePeerDependencies:
       - supports-color
@@ -9295,7 +9297,7 @@ packages:
   /wide-align/1.1.5:
     resolution: {integrity: sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==}
     dependencies:
-      string-width: 1.0.2
+      string-width: 4.2.3
     dev: true
 
   /widest-line/2.0.1:

@@ -4,6 +4,7 @@ import { visitEmbedded } from './definePlugin';
 import type { DocumentServiceRuntimeContext, LanguageServiceRuntimeContext } from '../types';
 import { EmbeddedLanguageServicePlugin } from '@volar/vue-language-service-types';
 import { EmbeddedDocumentSourceMap, VueDocument } from '../vueDocuments';
+import logger from '@volar/logger';
 
 export async function documentFeatureWorker<T>(
 	context: DocumentServiceRuntimeContext,
@@ -133,6 +134,7 @@ export async function languageFeatureWorker<T, K>(
 
 		await visitEmbedded(vueDocument, embeddeds, async sourceMap => {
 
+			logger.info(`[vue-langauge-service featureWorkers sourceMap.embeddedFile.lsType]: ${sourceMap.embeddedFile.lsType}`);
 			const plugins = context.getPlugins(sourceMap.embeddedFile.lsType);
 
 			for (const mapedArg of transformArg(arg, sourceMap)) {
