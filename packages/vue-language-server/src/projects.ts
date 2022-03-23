@@ -7,6 +7,7 @@ import { createProject, Project } from './project';
 import type { createLsConfigs } from './configHost';
 import { getDocumentSafely } from './utils';
 import { RuntimeEnvironment } from './common';
+import logger from '@volar/logger';
 
 export interface Projects extends ReturnType<typeof createProjects> { }
 
@@ -55,7 +56,7 @@ export function createProjects(
 		};
 	});
 	documents.onDidChangeContent(async change => {
-
+		logger.info('[vue-language-server projects.ts onDidChangeContent]');
 		await waitForOnDidChangeWatchedFiles(change.document.uri);
 
 		for (const workspace of workspaces.values()) {
@@ -71,7 +72,7 @@ export function createProjects(
 		connection.sendDiagnostics({ uri: change.document.uri, diagnostics: [] });
 	});
 	connection.onDidChangeWatchedFiles(async handler => {
-
+		logger.info('[vue-language-server projects.ts onDidChangeWatchedFiles]');
 		const tsConfigChanges: vscode.FileEvent[] = [];
 		const scriptChanges: vscode.FileEvent[] = [];
 

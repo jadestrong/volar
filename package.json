@@ -18,5 +18,12 @@
 		"lerna": "latest",
 		"typescript": "latest",
 		"vitest": "^0.8.4"
+	},
+	"resolutions": {
+		"to-vfile": "7.1.0"
+	},
+	"dependencies": {
+		"@volar/logger": "workspace:^0.33.6",
+		"semver": "^7.3.5"
 	}
 }

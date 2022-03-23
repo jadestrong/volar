@@ -43,6 +43,7 @@ export function register(
 		return languageService?.doCompletionResolve(item, newPosition) ?? item;
 	});
 	connection.onHover(async handler => {
+		logger.info('[languageFeatures onHover]');
 		const languageService = await getLanguageService(handler.textDocument.uri);
 		return languageService?.doHover(handler.textDocument.uri, handler.position);
 	});

@@ -109,7 +109,7 @@ ${version}`);
 			const scriptSnapshot = host.getScriptSnapshot(fileName);
 			if (scriptSnapshot) {
 				const scriptText = scriptSnapshot.getText(0, scriptSnapshot.getLength());
-				logger.info(`oldDoc: ${oldDoc ?? '---'}`);
+				logger.info(`oldDoc: ${oldDoc ?? 'NOT_MATCH'}`);
 				const document = TextDocument.create(uri, shared.syntaxToLanguageId(path.extname(uri).slice(1)), oldDoc ? oldDoc[1].version + 1 : 0, scriptText);
 				documents.uriSet(uri, [version, document]);
 			}

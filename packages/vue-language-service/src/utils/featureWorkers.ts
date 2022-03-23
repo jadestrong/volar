@@ -4,6 +4,7 @@ import { visitEmbedded } from './definePlugin';
 import type { DocumentServiceRuntimeContext, LanguageServiceRuntimeContext } from '../types';
 import { EmbeddedLanguageServicePlugin } from '@volar/vue-language-service-types';
 import { EmbeddedDocumentSourceMap, VueDocument } from '../vueDocuments';
+import logger from '@volar/logger';
 
 export async function documentFeatureWorker<T>(
 	context: DocumentServiceRuntimeContext,
